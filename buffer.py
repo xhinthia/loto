@@ -1,3 +1,7 @@
+import os
+import os.path
+import sys
+
 with open("init.txt","r") as f_read:
 	for line in f_read:
 		line=line.strip()
@@ -23,39 +27,52 @@ while a==1:
 			bonus_manquant=1
 			c=1
 			while c==1:
+				os.system('cls' if os.name == 'nt' else 'clear')
 				print ("**********************************")
 				print ("")
-				print ("		NOUVEAU TIRAGE")
-        		print ("")
-        		print ("**********************************")
-        		print ("")
-        		print ("<><><><><><><><><><><><><><><><><>")
-        		print ("")
-        		if str(numero1)!=0:
-        			print ("1e numéro : "+str(numero1))
-        		if str(numero2)!=0:
-        			print ("2e numéro : "+str(numero2))
-        		if str(numero3)!=0:
-        			print ("3e numéro : "+str(numero3))
-        		if str(numero4)!=0:
-        			print ("4e numéro : "+str(numero4))
-        		if str(numero5)!=0:
-        			print ("5e numéro : "+str(numero5))
+				print ("	NOUVEAU TIRAGE")
 				print ("")
-				if str(bonus1)!=0:
+				print ("**********************************")
+				print ("")
+				print ("<><><><><><><><><><><><><><><><><>")
+				print ("")
+				if str(numero1)!="0":
+					print ("1e numéro : "+str(numero1))
+				else:
+					print ("1e numéro manquant")
+				if str(numero2)!="0":
+					print ("2e numéro : "+str(numero2))
+				else:
+					print ("2e numéro manquant")
+				if str(numero3)!="0":
+					print ("3e numéro : "+str(numero3))
+				else:
+					print ("3e numéro manquant")
+				if str(numero4)!="0":
+					print ("4e numéro : "+str(numero4))
+				else:
+					print ("4e numéro manquant")
+				if str(numero5)!="0":
+					print ("5e numéro : "+str(numero5))
+				else:
+					print ("5e numéro manquant")
+				print ("")
+				if str(bonus1)!="0":
 					print ("Numéro bonus : "+str(bonus1))
+				else:
+					print ("Numéro bonus manquant")
 				print ("")
 				print ("<><><><><><><><><><><><><><><><><>")
 				print ("")
 				print ("")
-				print ("1 - Valider (Vous devez ajouter "+str(numero_manquant)+" et "+str(bonus_manquant)+" pour valider ce nouveau tirage)")
+				print ("1 - Ajouter un nouveau numéro")
 				print ("2 - Réinitialiser les numéros")
-				print ("3 - Ajouter un nouveau numéro")
+				print ("3 - Valider (Vous devez ajouter les numéros manquants et le numéro bonus pour valider ce nouveau tirage)")
 				print ("0 - Quitter (cette action quitte la fenêtre)")
 				choix_c=input()
 				if str(choix_c)=="0":
 					quit()
-				elif str(choix_c)=="1":
+				elif str(choix_c)=="3":
 					if numero_manquant==0 and bonus_manquant==0:
 						fw = open(str("tirages/"+str(init)),"w")
 						fw.write(str(numero1))
@@ -70,25 +87,33 @@ while a==1:
 						fw.write("\n")
 						fw.write(str(bonus1))
 						fw.close()
+						init=int(init)
 						init+=1
 						if os.path.isfile("init.txt")=="true":
 							os.remove("init.txt")
 						fw = open("init.txt","w")
 						fw.write(str(init))
 						fw.close()
+						print ("")
+						print ("")
 						print ("Nouveau tirage ajouté !")
 						print ("")
 						terminer=input("Appuyez sur une touche pour fermer...")
 					else:
+						print ("")
+						print ("")
 						print ("Vous devez entrer les 5 numéros et le numéro bonus !")
+						print ("")
+						terminer=input("Appuyez sur une touche pour fermer...")
 						pass
 				elif str(choix_c)=="2":
 					c=0
 					pass
-				elif str(choix_c)=="3":
+				elif str(choix_c)=="1":
 					if numero_manquant>0:
 						d=1
 						while d==1:
+							print ("")
 							choix_d=input("Veuillez entrer un chiffre entre 1 et 49 : ")
 							try:
 								choix_d=int(choix_d)
@@ -112,6 +137,7 @@ while a==1:
 					elif numero_manquant==0 and bonus_manquant==1:
 						d=1
 						while d==1:
+							print ("")
 							choix_d=input("Veuillez entrer un chiffre entre 1 et 10 : ")
 							try:
 								choix_d=int(choix_d)
@@ -124,7 +150,10 @@ while a==1:
 							else:
 								pass
 					else:
+						print ("")
 						print ("Vous avez déjà entré les 5 numéros et le bonus, vous devez soit valider soit réinitialiser !")
+						print ("")
+						terminer=input("Appuyez sur une touche pour continuer...")
 						pass
 	elif str(choix_a)=="2":
 		quit()
