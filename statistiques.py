@@ -203,6 +203,7 @@ for i in range(1,init):
 			else:
 				chiffretotal+=i
 
+
 chiffre1=chiffre1/chiffretotal*100
 chiffre2=chiffre2/chiffretotal*100
 chiffre3=chiffre3/chiffretotal*100
@@ -268,6 +269,73 @@ bonus8=bonus8/bonustotal*100
 bonus9=bonus9/bonustotal*100
 bonus10=bonus10/bonustotal*100
 
+dictionnaire = {}
+dictionnaire[1] = chiffre1
+dictionnaire[2] = chiffre2
+dictionnaire[3] = chiffre3
+dictionnaire[4] = chiffre4
+dictionnaire[5] = chiffre5
+dictionnaire[6] = chiffre6
+dictionnaire[7] = chiffre7
+dictionnaire[8] = chiffre8
+dictionnaire[9] = chiffre9
+dictionnaire[10] = chiffre10
+
+dictionnaire[11] = chiffre1
+dictionnaire[12] = chiffre2
+dictionnaire[13] = chiffre3
+dictionnaire[14] = chiffre4
+dictionnaire[15] = chiffre5
+dictionnaire[16] = chiffre6
+dictionnaire[17] = chiffre7
+dictionnaire[18] = chiffre8
+dictionnaire[19] = chiffre9
+dictionnaire[20] = chiffre10
+
+dictionnaire[21] = chiffre1
+dictionnaire[22] = chiffre2
+dictionnaire[23] = chiffre3
+dictionnaire[24] = chiffre4
+dictionnaire[25] = chiffre5
+dictionnaire[26] = chiffre6
+dictionnaire[27] = chiffre7
+dictionnaire[28] = chiffre8
+dictionnaire[29] = chiffre9
+dictionnaire[30] = chiffre10
+
+dictionnaire[31] = chiffre1
+dictionnaire[32] = chiffre2
+dictionnaire[33] = chiffre3
+dictionnaire[34] = chiffre4
+dictionnaire[35] = chiffre5
+dictionnaire[36] = chiffre6
+dictionnaire[37] = chiffre7
+dictionnaire[38] = chiffre8
+dictionnaire[39] = chiffre9
+dictionnaire[40] = chiffre10
+
+dictionnaire[41] = chiffre1
+dictionnaire[42] = chiffre2
+dictionnaire[43] = chiffre3
+dictionnaire[44] = chiffre4
+dictionnaire[45] = chiffre5
+dictionnaire[46] = chiffre6
+dictionnaire[47] = chiffre7
+dictionnaire[48] = chiffre8
+dictionnaire[49] = chiffre9
+
+"""
+sort_dico = sorted(dictionnaire.items(), key=lambda x: x[1], reverse=True)
+for i in sort_dico:
+	print (i[0])
+
+a=input()
+"""
+for i in dictionnaire:
+	print (i:)
+dictionnaire
+a=input()
+"""
 print ("1 : "+str(chiffre1)+"%")
 print ("2 : "+str(chiffre2)+"%")
 print ("3 : "+str(chiffre3)+"%")
@@ -333,93 +401,4 @@ print ("Bonus 8 : "+str(bonus8)+"%")
 print ("Bonus 9 : "+str(bonus9)+"%")
 print ("Bonus 10 : "+str(bonus10)+"%")
 continuer=input()
-
-
-"""
-	print ("**********************************")
-        print ("")
-        print ("	"+str(liste1[1]))
-        print ("")
-        print ("**********************************")
-        print ("")
-        print ("<><><><><><><><><><><><><><><><><>")
-        print ("")
-        x=0
-        y=1
-        for x in range (2,20,2):
-            if liste1[x]!=0:
-                print ("Palier "+str(y)+" : "+str(liste1[x+1]))
-                y+=1
-            else:
-                pass
-        print ("")
-        print ("<><><><><><><><><><><><><><><><><>")
-
-        print ("")
-        print ("")
-
-        liste2 = []
-        with open(fichier2,"r") as f_read:
-            for line in f_read:
-                line=line.strip()
-                liste2.append(line)
-        f_read.close()
-        print ("**********************************")
-        print ("")
-        print ("    "+str(liste2[1]))
-        print ("")
-        print ("**********************************")
-        print ("")
-        print ("<><><><><><><><><><><><><><><><><>")
-        print ("")
-        i=0
-        j=1
-        for i in range (2,20,2):
-            if str(liste2[i])=="0":
-                pass
-            else:
-                print ("Palier "+str(j)+" : "+str(liste2[i+1]))
-                j+=1
-        print ("")
-        print ("<><><><><><><><><><><><><><><><><>")
-
-        print (" ")
-        print (" ")
-
-
-
-print ("1 - Ajouter un tirage")
-print ("2 - Consulter les statistiques")
-a=1
-while a==1:
-	choix=input("Merci de taper 1 ou 2 : ")
-	if str(choix)=="1":
-		a=0
-		os.system('cls' if os.name == 'nt' else 'clear')
-		print ("____________________________________________________________________________")
-		print ("|																			|")
-		print ("|  Vous devez toujours ajouter les tirages du plus vieux au plus récents ! 	|")
-		print ("|___________________________________________________________________________|")
-		print ("")
-		continuer=input("Appuyez sur une touche pour continuer...")
-		os.system('cls' if os.name == 'nt' else 'clear')
-		print ("____________________________________")
-		print ("|									|")
-		print ("|   CHIFFRE AJOUTE POUR CE TIRAGE 	|")
-		print ("|___________________________________|")
-		print ("")
-		print ("XXXXX")
-		print ("")
-		print ("____________________________________")
-		print ("")
-		print ("1 - Réinitialiser mon ajout en cours")
-		print ("2 - Ajouter un nouveau chiffre au tirage")
-		print ("3 - Valider mon tirage")
-		print ("0 - Retour")
-		chiffre=input("")
-	elif str(choix)=="2":
-		a=0
-		#consultation
-	else:
-		pass
 """
