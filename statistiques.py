@@ -2,6 +2,7 @@
 import os
 import os.path
 import sys
+from collections import OrderedDict
 
 chiffretotal=0
 chiffre1=0
@@ -269,73 +270,6 @@ bonus8=bonus8/bonustotal*100
 bonus9=bonus9/bonustotal*100
 bonus10=bonus10/bonustotal*100
 
-dictionnaire = {}
-dictionnaire[1] = chiffre1
-dictionnaire[2] = chiffre2
-dictionnaire[3] = chiffre3
-dictionnaire[4] = chiffre4
-dictionnaire[5] = chiffre5
-dictionnaire[6] = chiffre6
-dictionnaire[7] = chiffre7
-dictionnaire[8] = chiffre8
-dictionnaire[9] = chiffre9
-dictionnaire[10] = chiffre10
-
-dictionnaire[11] = chiffre1
-dictionnaire[12] = chiffre2
-dictionnaire[13] = chiffre3
-dictionnaire[14] = chiffre4
-dictionnaire[15] = chiffre5
-dictionnaire[16] = chiffre6
-dictionnaire[17] = chiffre7
-dictionnaire[18] = chiffre8
-dictionnaire[19] = chiffre9
-dictionnaire[20] = chiffre10
-
-dictionnaire[21] = chiffre1
-dictionnaire[22] = chiffre2
-dictionnaire[23] = chiffre3
-dictionnaire[24] = chiffre4
-dictionnaire[25] = chiffre5
-dictionnaire[26] = chiffre6
-dictionnaire[27] = chiffre7
-dictionnaire[28] = chiffre8
-dictionnaire[29] = chiffre9
-dictionnaire[30] = chiffre10
-
-dictionnaire[31] = chiffre1
-dictionnaire[32] = chiffre2
-dictionnaire[33] = chiffre3
-dictionnaire[34] = chiffre4
-dictionnaire[35] = chiffre5
-dictionnaire[36] = chiffre6
-dictionnaire[37] = chiffre7
-dictionnaire[38] = chiffre8
-dictionnaire[39] = chiffre9
-dictionnaire[40] = chiffre10
-
-dictionnaire[41] = chiffre1
-dictionnaire[42] = chiffre2
-dictionnaire[43] = chiffre3
-dictionnaire[44] = chiffre4
-dictionnaire[45] = chiffre5
-dictionnaire[46] = chiffre6
-dictionnaire[47] = chiffre7
-dictionnaire[48] = chiffre8
-dictionnaire[49] = chiffre9
-
-"""
-sort_dico = sorted(dictionnaire.items(), key=lambda x: x[1], reverse=True)
-for i in sort_dico:
-	print (i[0])
-
-a=input()
-"""
-for i in dictionnaire:
-	print (i:)
-dictionnaire
-a=input()
-"""
 print ("1 : "+str(chiffre1)+"%")
 print ("2 : "+str(chiffre2)+"%")
 print ("3 : "+str(chiffre3)+"%")
@@ -401,4 +335,3 @@ print ("Bonus 8 : "+str(bonus8)+"%")
 print ("Bonus 9 : "+str(bonus9)+"%")
 print ("Bonus 10 : "+str(bonus10)+"%")
 continuer=input()
-"""
