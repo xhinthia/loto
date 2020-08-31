@@ -312,7 +312,7 @@ print ("36 : "+str(chiffre36)+"%")
 print ("37 : "+str(chiffre37)+"%")
 print ("38 : "+str(chiffre38)+"%")
 print ("39 : "+str(chiffre39)+"%")
-print ("10 : "+str(chiffre10)+"%")
+print ("40 : "+str(chiffre40)+"%")
 
 print ("41 : "+str(chiffre41)+"%")
 print ("42 : "+str(chiffre42)+"%")

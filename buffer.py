@@ -105,7 +105,7 @@ while a==1:
 						print ("Vous devez entrer les 5 numéros et le numéro bonus !")
 						print ("")
 						terminer=input("Appuyez sur une touche pour fermer...")
-						pass
+						c=0
 				elif str(choix_c)=="2":
 					c=0
 					pass
